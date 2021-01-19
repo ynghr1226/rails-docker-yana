@@ -38,10 +38,10 @@ jobs:
           name: test
           command: bundle exec rake test
 
-    deploy:
-      docker:
+  deploy:
+    docker:
       - image: circleci/ruby:2.7
-      steps:
+    steps:
       - checkout
       - setup_remote_docker:
           version: 19.03.13
